@@ -1,70 +1,86 @@
-<DOCTYPE >
+<!DOCTYPE html>
 <html lang="pt-br">
   <head>
-	<meta charset="UTF-8" />
-    <title>Aula DSI 23-08-21</title>
+        <meta charset="UTF-8"/>
+        <title>Aula DSI 30-08-21</title>
+        <style>
+            h1 {color:black;}
+            p {color:black;}
+        </style>
+        <!--<base href="https://www.unip.br" target="_blank">-->
   </head>
-  <body> 
-    <h1>Título do capítulo 1</h1>
-        <p><i>Texto explicando as</i> <b>subseções</b>.</p>
-        <h2 id="heading2">Título da seção 1.1</h2>
-            <h3>Título da subseção 1.1.1</h3>
-                <p><b><i>Texto de <a href="#fim">fato</a></i></b>.</p>
-        <h2>Título da seção 1.2</h2>
-            <h3>Título da <br> subseção 1.2.1</h3>
-            <!--<h3>Título da subseção 1.2.2</h3>
-            <p>Texto.</p>
-                <h4>Título da subsubseção 1.2.2.1</h4>-->
-                <p><em>Texto <mark>concluindo</mark>.</em></p>
-                <p>CLIQUE NO GATINHO PARA MAIS GATINHOS!</p>                
-                <figure>
-                    <a href="https://www.pexels.com/pt-br/procurar/gatos/" target="_blank"><img src="gatineo.png" alt="FALTOU MEU GATO AQUI"></a>
-                    <figcaption>Meu gato.</figcaption>
-                </figure>
 
-                O gatinho gosta de:
-                <ul>
-                    <li>Leite</li>
-                    <li>Rato</li>
-                    <li>Menosprezar humanos</li>
-                </ul>
-                
-                O gatinho não gosta de:
-                <ol>
-                    <li>Banho</li>
-                    <li>Cachorro</li>
-                    <li id="fim">Trovão</li>
-                </ol>
+  <body>
+    <img src="header.png" alt="Serviço de Manutenção - Hotel Letoh" width="350">
+        <div>
+            
+            <h1>Equipe de manutenção</h1>
+            <table>
+                <tr>
+                    <th>Responsáveis pela manutenção</th>
+                    <th colspan="2">Telefone</th>
+                    <th colspan="2">Horários</th>
+                </tr>
+                <tr>
+                    <td>Arnaldo Rodrigues (Chefe)</td>
+                    <td colspan="2">123-456-789</td>
+                    <td colspan="2">8h às 17h</td>
+                </tr>
+                <tr>
+                    <td>Rodrigues Álvares</td>
+                    <td colspan="2">987-654-321</td>
+                    <td colspan="2">18h às 4h</td>
+                </tr>
+            </table>
+
+            <h1>Serviço de manutenção</h1>
+
+            <p>Favor preencher e selecionar os elementos corretos para a solicitação do serviço.</p>
+        </div>
         
-                Visite nossa página no <a href="#heading2">Inxta</a>.
+        <div>
+                <form>
+                        <div>
+                            <p><b>1.</b>Nome do solicitante da manutenção</p>
+                            <input type="text" placeholder="Digite aqui seu nome">
+                        </div>
+                        
+                        <br>
 
-   <!-- Exemplo de comentário -->
-   <br>
-   <br>
-   
-   <form>
-       <p><b>Insira seu nome</b></p>
-   <input type="text" placeholder="Digite aqui">
-   
-   <br>
+                        <div>
+                            <p><b>2.</b>Selecione a divisão do hotel onde deseja realizar o serviço</p>
 
-   <p><b>Escolha as opções para o almoço</b></p>
-    
-    <label for="refeicao"><input id="arroz" type="checkbox" name="refeicao"> Arroz</label>
-    <label for="refeicao"><input id="feijao" type="checkbox" name="refeicao"> Feijão</label>
-    <label for="refeicao"><input id="carne" type="checkbox" name="refeicao"> Carne</label>
-    <label for="refeicao"><input id="salada" type="checkbox" name="refeicao"> Salada</label>
-    <br>
+                            <!--<img src="areas_hotel.gif" alt="Áreas do hotel" width="350"></a>-->
+                            <label for="divisao-hotel"><input id="cozinha" type="radio" name="divisao">Cozinha</label>
+                            <br>
+                            <label for="divisao-hotel"><input id="area-servico" type="radio" name="divisao">Área de serviço</label>
+                            <br>
+                            <label for="divisao-hotel"><input id="area-lazer" type="radio" name="divisao">Área de lazer</label>
+                            <br>
+                            <label for="divisao-hotel"><input id="quartos" type="radio" name="divisao">Quartos</label>
+                            <br>
+                        </div>
 
-    <p><b>Quer café incluso?</b></p>
-    <label for="cafe-incluso"><input id="sim" type="radio" name="cafe-incluso">sim</label>
-    <label for="cafe-incluso"><input id="não" type="radio" name="cafe-incluso">não</label>
-      
-    <br>
-    <br>
-    <button type="submit">Enviar</button>
+                        <div>
+                            <p><b>3.</b>Tipo de manutenção</p>
+                            <label for="tipo-manutencao"><input id="troca" type="checkbox" name="tipo"> Troca</label>
+                            <br>
+                            <label for="tipo-manutencao"><input id="reparo" type="checkbox" name="tipo"> Reparo</label>
+                            <br>
+                            <label for="tipo-manutencao"><input id="ajuste" type="checkbox" name="tipo"> Ajuste</label>
+                            <br>
+                        </div>
 
-   </form>
+                        <div>
+                            <p><b>4.</b>Descrição do problema</p>
+                            <input type="text" placeholder="Digite aqui o problema">
+                            <br><br>
+                        </div>
+
+                        <p>Verifique se <em>todos</em> os campos estão preenchidos. Se sim, envie sua requisição.</p>
+                        <button type="submit">Enviar</button>
+                </form>
+        </div>
     
   </body>
 </html>

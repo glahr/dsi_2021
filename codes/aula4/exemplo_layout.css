@@ -1,0 +1,13 @@
+p {
+    text-align: center;
+    color: red;
+}
+
+h1, h2 {
+    text-align: center;
+    color: green;
+}
+
+.alinhaEsquerda {
+    text-align: left;
+}
